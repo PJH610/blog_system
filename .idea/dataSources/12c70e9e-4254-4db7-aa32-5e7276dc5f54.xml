@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="blog@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="blog">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="db_personnel"/>
+    <schema id="4" parent="1" name="db_task"/>
+    <schema id="5" parent="1" name="db_test"/>
+    <schema id="6" parent="1" name="db_test1"/>
+    <schema id="7" parent="1" name="db_user1"/>
+    <schema id="8" parent="1" name="db_user2"/>
+    <schema id="9" parent="1" name="information_schema"/>
+    <schema id="10" parent="1" name="liang"/>
+    <schema id="11" parent="1" name="mysql"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="research"/>
+    <schema id="14" parent="1" name="runoob"/>
+    <schema id="15" parent="1" name="sakila"/>
+    <schema id="16" parent="1" name="student"/>
+    <schema id="17" parent="1" name="sys"/>
+    <schema id="18" parent="1" name="td_books"/>
+    <schema id="19" parent="1" name="tmall_ssm"/>
+    <schema id="20" parent="1" name="t_user"/>
+    <schema id="21" parent="1" name="world"/>
+    <table id="22" parent="2" name="jh_articles"/>
+    <table id="23" parent="2" name="jh_comments"/>
+    <table id="24" parent="2" name="jh_download_file"/>
+    <table id="25" parent="2" name="jh_floors"/>
+    <table id="26" parent="2" name="jh_friend_links"/>
+    <table id="27" parent="2" name="jh_labels"/>
+    <table id="28" parent="2" name="jh_menus"/>
+    <table id="29" parent="2" name="jh_moderator">
+      <Comment>版主表</Comment>
+    </table>
+    <table id="30" parent="2" name="jh_options">
+      <Comment>这是网站管理表</Comment>
+    </table>
+    <table id="31" parent="2" name="jh_posts"/>
+    <table id="32" parent="2" name="jh_set_article_label"/>
+    <table id="33" parent="2" name="jh_set_artitle_sort"/>
+    <table id="34" parent="2" name="jh_sorts"/>
+    <table id="35" parent="2" name="jh_submenus"/>
+    <table id="36" parent="2" name="jh_user_friends"/>
+    <table id="37" parent="2" name="jh_users"/>
+    <column id="38" parent="22" name="user_id">
+      <Position>2</Position>
+      <Comment>发表用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="22" name="article_title">
+      <Position>3</Position>
+      <Comment>博文标题</Comment>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="22" name="article_content">
+      <Position>4</Position>
+      <Comment>博文内容</Comment>
+      <DataType>longblob|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="22" name="article_views">
+      <Position>5</Position>
+      <Comment>浏览量</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="22" name="article_comment_count">
+      <Position>6</Position>
+      <Comment>评论总数</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="22" name="article_date">
+      <Position>7</Position>
+      <Comment>发表日期</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="22" name="article_like_count">
+      <Position>8</Position>
+      <Comment>发表点赞数</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="22" name="id">
+      <Position>1</Position>
+      <Comment>博文ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="46" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="23" name="user_id">
+      <Position>2</Position>
+      <Comment>发表用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="23" name="article_id">
+      <Position>3</Position>
+      <Comment>评论文字ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="23" name="comment_like_count">
+      <Position>4</Position>
+      <Comment>点赞数</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="23" name="comment_date">
+      <Position>5</Position>
+      <Comment>评论日期</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="23" name="comment_content">
+      <Position>6</Position>
+      <Comment>评论内容</Comment>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="23" name="parent_comment_id">
+      <Position>7</Position>
+      <Comment>父评论ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="23" name="id">
+      <Position>1</Position>
+      <Comment>评论ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="54" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="56" parent="24" name="file_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="24" name="file_url">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="58" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="59" parent="25" name="user_id">
+      <Position>2</Position>
+      <Comment>回帖用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="25" name="post_id">
+      <Position>3</Position>
+      <Comment>所属主贴ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="25" name="floor_content">
+      <Position>4</Position>
+      <Comment>回帖内容</Comment>
+      <DataType>longtext|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="25" name="floor_date">
+      <Position>5</Position>
+      <Comment>回帖时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="25" name="parent_floor_id">
+      <Position>6</Position>
+      <Comment>父回帖ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="25" name="id">
+      <Position>1</Position>
+      <Comment>回帖ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="65" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="66" parent="26" name="friend_links">
+      <Position>2</Position>
+      <Comment>友链链接</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="26" name="friend_link_name">
+      <Position>3</Position>
+      <Comment>友链名称</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="26" name="friend_link_description">
+      <Position>4</Position>
+      <Comment>友链描述</Comment>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="26" name="friend_link_logo">
+      <Position>5</Position>
+      <Comment>友链Logo</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="26" name="id">
+      <Position>1</Position>
+      <Comment>友链ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="71" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="27" name="label_name">
+      <Position>2</Position>
+      <Comment>标签名称</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="27" name="lable_alias">
+      <Position>3</Position>
+      <Comment>标签别名</Comment>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="27" name="lable_description">
+      <Position>4</Position>
+      <Comment>标签描述</Comment>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="27" name="id">
+      <Position>1</Position>
+      <Comment>标签ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="76" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="77" parent="28" name="menu_name">
+      <Position>2</Position>
+      <Comment>总菜单名称</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="28" name="id">
+      <Position>1</Position>
+      <Comment>总菜单ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="79" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="80" parent="29" name="forum_id">
+      <Position>2</Position>
+      <Comment>论坛ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="29" name="moderator_level">
+      <Position>3</Position>
+      <Comment>版主级别</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="29" name="id">
+      <Position>1</Position>
+      <Comment>版主ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <key id="83" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="84" parent="30" name="option_name">
+      <Position>2</Position>
+      <Comment>选项名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="30" name="option_values">
+      <Position>3</Position>
+      <Comment>选项值</Comment>
+      <DataType>longtext|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="30" name="id">
+      <Position>1</Position>
+      <Comment>选项ID</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="87" parent="30" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="88" parent="31" name="forum_id">
+      <Position>2</Position>
+      <Comment>论坛ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="31" name="user_id">
+      <Position>3</Position>
+      <Comment>回帖用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="31" name="post_title">
+      <Position>4</Position>
+      <Comment>帖子标题</Comment>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="31" name="post_views">
+      <Position>5</Position>
+      <Comment>帖子浏览量</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="31" name="post_content">
+      <Position>6</Position>
+      <Comment>帖子内容</Comment>
+      <DataType>longtext|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="31" name="post_date">
+      <Position>7</Position>
+      <Comment>发帖时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="31" name="post_status">
+      <Position>8</Position>
+      <Comment>帖子状态</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="31" name="post_comment_count">
+      <Position>9</Position>
+      <Comment>回帖个数</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="31" name="id">
+      <Position>1</Position>
+      <Comment>主体ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="97" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="98" parent="32" name="article_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="32" name="label">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="100" parent="32" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>article_id
+label</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="101" parent="33" name="article_id">
+      <Position>1</Position>
+      <Comment>文章ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="33" name="sort_id">
+      <Position>2</Position>
+      <Comment>分类ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="103" parent="33" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>article_id
+sort_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="104" parent="34" name="sort_name">
+      <Position>2</Position>
+      <Comment>分类名称</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="34" name="sort_alias">
+      <Position>3</Position>
+      <Comment>分类别名</Comment>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="106" parent="34" name="sort_description">
+      <Position>4</Position>
+      <Comment>分类描述</Comment>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="34" name="parent_sort_id">
+      <Position>5</Position>
+      <Comment>父分类ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="108" parent="34" name="id">
+      <Position>1</Position>
+      <Comment>父类ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="109" parent="34" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="110" parent="35" name="menu_id">
+      <Position>2</Position>
+      <Comment>总菜单ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="35" name="link_name">
+      <Position>3</Position>
+      <Comment>子菜单名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="112" parent="35" name="link_target">
+      <Position>4</Position>
+      <Comment>子菜单链接</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="113" parent="35" name="link_open_way">
+      <Position>5</Position>
+      <Comment>子菜单打开方式</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="35" name="parent_link_id">
+      <Position>6</Position>
+      <Comment>父菜单ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="115" parent="35" name="id">
+      <Position>1</Position>
+      <Comment>子菜单ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="116" parent="35" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="117" parent="36" name="id">
+      <Position>1</Position>
+      <Comment>标识ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="118" parent="36" name="user_id">
+      <Position>2</Position>
+      <Comment>用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="119" parent="36" name="user_friends_id">
+      <Position>3</Position>
+      <Comment>好友ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="36" name="user_note">
+      <Position>4</Position>
+      <Comment>好友备注</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="121" parent="36" name="user_status">
+      <Position>5</Position>
+      <Comment>好友状态</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="122" parent="36" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="123" parent="37" name="id">
+      <Position>1</Position>
+      <Comment>用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="124" parent="37" name="name">
+      <Position>2</Position>
+      <Comment>用户名</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="125" parent="37" name="password">
+      <Position>3</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="126" parent="37" name="mobile_phone">
+      <Position>4</Position>
+      <Comment>手机号</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="37" name="email">
+      <Position>5</Position>
+      <Comment>邮箱</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="128" parent="37" name="role_type">
+      <Position>6</Position>
+      <Comment>角色值</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="129" parent="37" name="freeze">
+      <Position>7</Position>
+      <Comment>冻结</Comment>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="130" parent="37" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

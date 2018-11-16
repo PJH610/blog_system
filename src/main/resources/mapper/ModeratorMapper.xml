@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blogsystem.dao.ModeratorDao">
+
+    <resultMap id="aaa" type="com.blogsystem.bean.Moderator">
+        <id column="moderator_id" property="moderatorId"/>
+        <result column="forum_id" property="forumId"/>
+        <result column="moderator_level" property="moderatorLevel"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.blogsystem.bean.Moderator" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO jh_moderator(forum_id,moderator_level)
+        VALUES(#{forumId},#{moderatorLevel})
+    </insert>
+
+    <select id="selectById" resultType="com.blogsystem.bean.Moderator" >
+        SELECT * FROM jh_moderator WHERE id=#{id}
+    </select>
+
+    <update id="update" parameterType="com.blogsystem.bean.Moderator">
+        UPDATE jh_moderator
+        <set>
+            <if test="moderatorLevel != null">moderator_level=#{moderatorLevel}</if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+    <delete id="deleteBatch">
+        DELETE FROM jh_moderator WHERE id IN
+        <foreach item="item" index="index" collection="array" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+    <select id="list" resultType="com.blogsystem.bean.Moderator">
+        SELECT * FROM jh_moderator
+    </select>
+
+</mapper>
